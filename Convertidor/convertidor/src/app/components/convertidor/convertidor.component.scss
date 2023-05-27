@@ -1,0 +1,21 @@
+.badge
+{
+    margin: 2px;
+    font-size: 150%;
+    //color: black;
+}
+label
+{
+    font-size: 150%;
+    -webkit-text-stroke: 0.5px white;
+    text-stroke: 0.5px white;
+  //color: black;
+  //  color: white;
+    background-image: linear-gradient(to right, #FF6B6B, #FFA06B, #FFF56B, #9EE09E, #6BAAF2, #C87DFF);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;   
+    font-weight: bold;
+
+}
