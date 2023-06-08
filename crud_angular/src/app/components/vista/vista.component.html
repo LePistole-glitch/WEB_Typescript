@@ -1,0 +1,47 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">No. profesor</th>
+          <th scope="col">Apellido Paterno</th>
+          <th scope="col">Apellido Materno</th>
+          <th scope="col">Nombre(s)</th>
+          <th scope="col">Tipo de Plaza</th>
+          <th scope="col">Horas a Impartir</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of profesoresarr">
+          <th scope="row">{{i.numemp}}</th>
+          <td>{{i.ap_paterno}}</td>
+          <td>{{i.ap_materno}}</td>
+          <td>{{i.nombres}}</td>
+          <td>{{i.tipo_plaza}}</td>
+          <td>{{i.horas_impartir}}</td>
+        </tr>
+      </tbody>
+  </table>
+  <br>
+  
+  <!--La otra uwu-->
+<table *ngFor="let i of profesoresarr" class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">No. profesor</th>
+            <th scope="col">Lunes</th>
+            <th scope="col">Martes</th>
+            <th scope="col">Miercoles</th>
+            <th scope="col">Jueves</th>
+            <th scope="col">Viernes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <th scope="row">{{i.numemp}}</th>
+            <td>{{i.horasDisponibles[1].Lunes.HoraInicio + "-"+ i.horasDisponibles[1].Lunes.HoraFin}}</td>
+            <td>{{i.horasDisponibles[2].Martes.HoraInicio + "-"+ i.horasDisponibles[2].Martes.HoraFin}}</td>
+            <td>{{i.horasDisponibles[3].Miercoles.HoraInicio + "-"+ i.horasDisponibles[3].Miercoles.HoraFin}}</td>
+            <td>{{i.horasDisponibles[0].Jueves.HoraInicio + "-"+ i.horasDisponibles[0].Jueves.HoraFin}}</td>
+            <td>{{i.horasDisponibles[4].Viernes.HoraInicio + "-"+ i.horasDisponibles[4].Viernes.HoraFin}}</td>
+        </tr>
+    </tbody>
+</table>

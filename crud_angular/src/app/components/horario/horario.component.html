@@ -1,0 +1,54 @@
+ <!-- boton para mandar llamar a la funcion genera horario, crear una tabla para mostrar la info de hrario, de inicio
+no muestra nada hasta que damos click al boton-->
+<br>
+<br>
+<br>
+<div class="button-container">
+  <button (click)="generaHorario()" class="btn btn-warning">Generar horario</button>
+</div>
+<br>
+<br>
+<br>
+<table *ngIf="horarioGen.length>0" class="table" >
+    <thead class="table-dark">
+        <tr>
+          <th scope="col">Clave</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Salon</th>
+          <th scope="col">Grupo</th>
+          <th scope="col">Profesor</th>
+          <th scope="col">Horario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor ="let i of horarioGen">
+          <th scope="row">{{i.clave_mat}}</th>
+          <td>{{i.descripcion}}</td>
+          <td>{{i.salon}}</td>
+          <td>{{i.grupo}}</td>
+          <td>{{i.ProfesorAsignado}}</td>
+          <td scope="col" colspan="5">
+            <table class="table mb-0">
+                <thead class="table-dark">
+                    <tr>
+                      <th scope="col">Lunes</th>
+                      <th scope="col">Martes</th>
+                      <th scope="col">Miercoles</th>
+                      <th scope="col">Jueves</th>
+                      <th scope="col">Viernes</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>{{i.horasDispoMat[1].Lunes.HoraInicio + "-" + i.horasDispoMat[1].Lunes.HoraFin}}</td>
+                      <td>{{i.horasDispoMat[2].Martes.HoraInicio + "-" + i.horasDispoMat[2].Martes.HoraFin}}</td>
+                      <td>{{i.horasDispoMat[3].Miercoles.HoraInicio + "-" + i.horasDispoMat[3].Miercoles.HoraFin}}</td>
+                      <td>{{i.horasDispoMat[0].Jueves.HoraInicio + "-" + i.horasDispoMat[0].Jueves.HoraFin}}</td>
+                      <td>{{i.horasDispoMat[4].Viernes.HoraInicio + "-" + i.horasDispoMat[4].Viernes.HoraFin}}</td>
+                    </tr>
+                  </tbody>
+            </table>
+          </td>        
+        </tr>
+      </tbody>
+  </table>

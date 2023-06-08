@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+          <th scope="col">Clave Materia</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Horas Teoricas</th>
+          <th scope="col">Horas Practicas</th>
+          <th scope="col">Creditos</th>
+          <th scope="col">Reticula</th>
+          <th scope="col">Salon</th>
+          <th scope="col">Grupo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of materiasarr">
+          <th scope="row">{{i.clave_mat}}</th>
+          <td>{{i.descripcion}}</td>
+          <td>{{i.ht}}</td>
+          <td>{{i.hp}}</td>
+          <td>{{i.credito}}</td>
+          <td>{{i.reticula}}</td>
+          <td>{{i.salon}}</td>
+          <td>{{i.grupo}}</td>
+        </tr>
+      </tbody>
+  </table>
+  <br>
+  
+ 

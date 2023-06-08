@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
-import { EditarUsuarioComponent } from './editar-usuario/editar-usuario.component';
+import { MateriasComponent } from './components/materias/materias.component';
+import { VistaComponent } from './components/vista/vista.component';
+import { HorarioComponent } from './components/horario/horario.component';
 
 const routes: Routes = [
-  { path: 'usuarios', component: ListaUsuariosComponent },
-  { path: 'usuarios/editar/:id', component: EditarUsuarioComponent},
-  { path: 'usuarios/agregar', component: EditarUsuarioComponent},
-  { path: '**', redirectTo:'/usuarios', pathMatch:'full' }
+  { path:'materias', component: MateriasComponent },
+  { path:'profesores', component: VistaComponent },
+  { path:'horario', component: HorarioComponent },
+  { path:'**', redirectTo:'/profesores', pathMatch:'full' }
 ];
 
 @NgModule({

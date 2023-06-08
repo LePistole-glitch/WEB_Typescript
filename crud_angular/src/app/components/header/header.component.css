@@ -1,0 +1,8 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.button-container button {
+    margin: 0 20px; /* Ajusta el valor de los márgenes según tus necesidades */
+  }
